@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
+<html lang="" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+    <meta name="x-apple-disable-message-reformatting">
+    <!-- fontawsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            /*overflow-x: hidden;
+            overflow-y: auto;*/
+         overflow-x: hidden !important; width: 100% !important; }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        .document {
+            width: 100% !important; max-width: 100% !important; overflow-x: hidden !important;
+            /*overflow-x: hidden;*/
+        }
+
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            margin: 0;
+        }
+
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+
+        /* MEDIA QUERIES */
+        @media all and (max-width:639px) {
+            .wrapper {
+                width: 100% !important;
+            }
+
+            .container {
+                width: 100% !important;
+                min-width: 100% !important;
+                padding: 0 !important;
+            }
+
+            .row {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+            .col-mobile {
+                width: 20px !important;
+            }
+
+            .col {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .mobile-center {
+                text-align: center !important;
+                float: none !important;
+            }
+
+            .mobile-mx-auto {
+                margin: 0 auto !important;
+                float: none !important;
+            }
+
+            .mobile-left {
+                text-align: center !important;
+                float: left !important;
+            }
+
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .ml-btn {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .ml-btn-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            *[class="mobileOff"] {
+                width: 0px !important;
+                display: none !important;
+            }
+
+            *[class*="mobileOn"] {
+                display: block !important;
+                max-height: none !important;
+            }
+
+            .mlContentTable {
+                width: 100% !important;
+                min-width: 10% !important;
+                margin: 0 !important;
+                float: none !important;
+            }
+
+            .mlContentButton a {
+                display: block !important;
+                width: auto !important;
+            }
+
+            .mlContentOuter {
+                padding-bottom: 0px !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                padding-top: 0px !important;
+            }
+
+            .mlContentSurvey {
+                float: none !important;
+                margin-bottom: 10px !important;
+                width: 100% !important;
+            }
+
+            .multiple-choice-item-table {
+                width: 100% !important;
+                min-width: 10% !important;
+                float: none !important;
+            }
+
+            .ml-default,
+            .ml-card,
+            .ml-fullwidth {
+                width: 100%;
+                min-width: 100%;
+            }
+            .blog-mobile{
+                width: 100%;
+                font-size: 20px;
+            }
+            .blog-mob-a{
+                font-size: 22px !important;
+                line-height: 25px !important;
+            }
+        }
+
+        /* Carousel style */
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .webkit {
+                display: block !important;
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            .non-webkit {
+                display: none !important;
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+            /* TARGET OUTLOOK.COM */
+            [class="x_non-webkit"] {
+                display: block !important;
+            }
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 0) {
+            [class="x_webkit"] {
+                display: none !important;
+            }
+        }
+    </style>
+
+    <style type="text/css">
+        @import url("https://assets.mlcdn.com/fonts-v2.css?version=1728988");
+    </style>
+    <style type="text/css">
+        @media screen {
+            body {
+                font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+            }
+        }
+    </style>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Nest and Baby</title>
+
+<style type="text/css">
+@media only screen and (max-width: 639px) {
+    body, .document, table, .container, .wrapper, .ml-card, .mlContentTable {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+    td {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+}
+</style>
+
+</head>
+
+<body style="margin: 0 !important; padding: 0 !important; background-color:#ffffff;">
+
+    <div class="document" role="article" aria-roledescription="email" aria-label="" lang="" dir="ltr" style="background-color:#ffffff; line-height: 100%; font-size:medium; font-size:max(16px, 1rem);">
+
+
+        <table width="100%" align="center" cellspacing="0" cellpadding="0" border="0">
+            <tr>
+                <td class="" background="" bgcolor="#ffffff" align="center" valign="top" style="padding: 0 8px;">
+
+                    <table class="container" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 100%; max-width: 640px;">
+                        <tr>
+                            <td align="center">
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" class="wrapper" align="center" border="0" cellpadding="0" cellspacing="0" style="
+                        max-width: 100%; max-width: 640px;">
+                        <tr>
+                            <td align="center">
+                                <!--  -->
+                                <table class="ml-card" width="100%" bgcolor="#FBF9F7" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="padding-bottom:8px;">
+
+                                            <table class="container ml-4 ml-card-border" width="100%" bgcolor="#FBF9F7" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 100%; max-width: 640px; 
+                border:1px solid #E6E3DD;
+                border-radius:8px; border-collapse: separate!important;
+                ">
+                                                <tr>
+                                                    <td class="ml-card-border container" height="10" style="line-height: 10px; "></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row" style="padding: 0 50px;">
+
+                                                        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td class="col mobile-center" align="left" width="250">
+
+                                                                    <a href="https://nestandbabyofficial.com/" target="_blank" style="text-decoration: none;" data-link-id="136471458518927074">
+                                                                        <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/a12a514f-6e6b-86fe-5ad9-abb3a155cfa9.png" border="0" alt="Nest and Baby" width="161.5" class="logo" style="max-width: 161.5px; display: inline-block; max-width: 100%; height: auto;">
+                                                                    </a>
+                                                                </td>
+                                                                <td class="col" width="40" height="30" style="line-height: 30px;"></td>
+                                                                <td class="col mobile-center" align="right" width="250">
+
+                                                                    <table class="mobile-mx-auto" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+
+                                                                            <td align="center" valign="middle" width="18" ng-show="slink.link != ''" style="padding: 0 5px 0 0; display: ruby">
+                                                                                <a href="https://www.instagram.com/nestandbaby.official/" target="blank" style="text-decoration: none; align-items: center;display: grid;height:30px; width:30px; margin-right: 5px;">
+                                                                                    <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/88816d81-c343-7b9f-9ab5-40e7578312c9.png" width="25px" alt="instagram">
+                                                                                </a>
+                                                                                <a href="https://www.youtube.com/@bumpndbaby" target="blank" style="text-decoration: none; align-items: center;display: grid;height:30px; width:30px ;">
+                                                                                    <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/f15d0378-26f8-9312-408a-8d4a40680520.png" width="25px" alt="youtube">
+                                                                                </a>
+                                                                            </td>
+                                                                            
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="10" style="line-height: 10px;"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--  -->
+
+
+                                <!--  -->
+                                <table class="ml-card" width="100%" bgcolor="#FBF9F7" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="padding-bottom:8px;">
+
+                                            <table class="container ml-27 ml-card-border" width="100%" bgcolor="#FBF9F7" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #515856; width: 100%; max-width: 640px;  border: 1px solid #E6E3DD; border-radius: 8px; border-collapse: separate;">
+                                                <tr>
+                                                    <td class="ml-card-border container" height="40" style="line-height: 40px; "></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row" style="padding: 0 50px;">
+
+                                                        <h1 style="text-align: center;font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #60474b; font-size: 36px; line-height: 125%; font-weight: bold; font-style: normal; text-decoration: none; ;margin-bottom: 10px;">
+                                                            Recent Most Loved Blog Posts</h1>
+
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                            <tr>
+                                                                <td height="20" style="line-height: 20px;"></td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="100%" cellpadding="10" cellspacing="0" border="0" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 16px; text-decoration: none">
+                                                            <tr>
+                                                                <td class="blog-mobile" width="25%">
+                                                                    <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/a01af21f-10f5-8f94-8594-e513b89eefa1.png" width="100%" style="border-radius: 5px; max-width: 100%; height: auto;">
+                                                                </td>
+                                                                <td>
+                                                                    <a href="https://nestandbabyofficial.com/breathing-techniques-to-ease-labor/" class="blog-mob-a" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 25px; font-weight:600; line-height:30px; text-decoration: none">Breathing
+                                                                        Techniques to Ease Labor</a>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                            <tr>
+                                                                <td class="blog-mobile" width="25%">
+                                                                    <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/_compresseds/02e1446b-8fca-4b66-e8ff-7f852d88576b.jpg" width="100%" style="border-radius: 5px; max-width: 100%; height: auto;">
+                                                                </td>
+                                                                <td>
+                                                                    <a href="https://nestandbabyofficial.com/5-ways-to-reduce-morning-sickness-naturally/" class="blog-mob-a" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 25px; font-weight:600; line-height:30px; text-decoration: none">5
+                                                                        Ways to Reduce Morning Sickness Naturally</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="blog-mobile" width="25%">
+                                                                    <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/8e9459aa-c39c-40f9-a9dc-f0a22b39c740.jpg" width="100%" style="border-radius: 5px; max-width: 100%; height: auto;">
+                                                                </td>
+                                                                <td>
+                                                                    <a href="https://nestandbabyofficial.com/overcoming-breastfeeding-challenges-naturally/" class="blog-mob-a" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 25px; font-weight:600; line-height:30px; text-decoration: none">Overcoming
+                                                                        Breastfeeding Challenges Naturally</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="20" style="line-height: 20px;"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="40" style="line-height: 40px;"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--  -->
+
+                                <table class="ml-card" width="100%" bgcolor="#FBF9F7" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="padding-bottom:8px;">
+
+                                            <table class="container ml-58 ml-card-border" width="100%" bgcolor="#FBF9F7" align="center" border="0" cellspacing="0" cellpadding="0" style="color: #515856; width: 100%; max-width: 640px;  border: 1px solid #E6E3DD; border-radius: 8px; border-collapse: separate;">
+                                                <tr>
+                                                    <td class="ml-card-border container" height="20" style="line-height: 20px; "></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row mobile-center" align="center" style="padding: 0 50px;">
+
+                                                        <table class="ml-58 wrapper" width="100%" border="0" cellspacing="0" cellpadding="0" style="color: #515856; text-align: center;">
+                                                            <tr>
+                                                                <td class="mobile-center">
+                                                                    <h4 style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 14px; line-height: 137%; font-weight: normal; font-style: normal; text-decoration: none; ;margin-bottom: 6px; margin-bottom: 0;">
+                                                                        Much Love,</h4>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td height="10" style="line-height: 10px;"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="mobile-center" style="line-height: 0;">
+                                                                    <h3 style="font-style: italic; font-size: 20px; color:#60474b; margin-top: 10px">
+                                                                        your NestandBaby Team</h3>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20" style="line-height: 20px;"></td>
+                                                </tr>
+                                            </table>
+
+
+
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!--  -->
+
+
+                                <!--  -->
+                                <table class="ml-card" width="100%" bgcolor="#FBF9F7" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td style="padding-bottom:8px;">
+
+                                            <table class="container ml-60 ml-card-border" width="100%" bgcolor="#FBF9F7" align="center" border="0" cellspacing="0" cellpadding="0" style="
+                width: 100%; max-width: 640px; 
+                border:1px solid #E6E3DD;
+                border-radius:8px; border-collapse: separate!important;
+                ">
+                                                <tr>
+                                                    <td class="ml-card-border container" height="40" style="line-height: 40px; "></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row" style="padding: 0 50px;">
+
+
+
+
+
+                                                        <table align="center" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="col" align="left" width="250" valign="top" style="text-align: left!important;">
+
+                                                                    <h5 style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #60474b; font-size: 15px; line-height: 125%; font-weight: bold; font-style: normal; text-decoration: none; margin-bottom: 6px;">
+                                                                        NestandBaby</h5>
+
+
+
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td height="16" style="line-height: 16px;">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col" align="left" width="250">
+                                                                            
+                                                                                <table class="mobile-mx-auto" role="presentation" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                            
+                                                                                        <td align="center" valign="middle" width="18" ng-show="slink.link != ''" style="padding: 0 5px 0 0; display: ruby">
+                                                                                            <a href="https://www.instagram.com/nestandbaby.official/" target="blank" style="text-decoration: none; align-items: center;display: grid;height:30px; width:30px; margin-right: 5px;">
+                                                                                                <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/88816d81-c343-7b9f-9ab5-40e7578312c9.png" width="25px" alt="instagram">
+                                                                                            </a>
+                                                                                            <a href="https://www.youtube.com/@bumpndbaby" target="blank" style="text-decoration: none; align-items: center;display: grid;height:30px; width:30px ;">
+                                                                                                <img src="https://mcusercontent.com/c2603d8eb79e2791f1f85a4b7/images/f15d0378-26f8-9312-408a-8d4a40680520.png" width="25px" alt="youtube">
+                                                                                            </a>
+                                                                                        </td>
+                                                                            
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                                <td class="col" width="40" height="30" style="line-height: 30px;"></td>
+                                                                <td class="col" align="left" width="250" valign="top" style="text-align: left!important;">
+
+                                                                    <p style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 14px; line-height: 150%; margin-bottom: 6px; display: inline-block;">
+                                                                        You received this email because you signed up on
+                                                                        our website or made a purchase from us.</p>
+
+
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td height="8" style="line-height: 8px;">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left">
+                                                                                <p style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; color: #515856; font-size: 14px; line-height: 150%; display: inline-block; margin-bottom: 0;">
+                                                                                    <a href="*|UNSUB|*" style="color: #515856; font-weight: normal; font-style: normal; text-decoration: underline;">Unsubscribe</a>
+
+                                                                                </p>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="40" style="line-height: 40px;"></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
